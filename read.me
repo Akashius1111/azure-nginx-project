@@ -1,16 +1,28 @@
-# Azure Nginx Web Server Deployment 🌐
+# Deploying Nginx Web Server on Azure Cloud
 
-This project demonstrates the deployment of an Nginx web server on a **Microsoft Azure Virtual Machine** with a secure network configuration.
+This project demonstrates how to deploy an Nginx web server on Azure using a secure network setup including:
+- Azure Virtual Network (VNet)
+- Network Security Group (NSG)
+- Azure Firewall (optional)
+- Azure Bastion
+- SSH PEM Authentication
 
-## 🚀 Features
-- Deployed a **Linux Virtual Machine** on Azure
-- Configured **Azure Virtual Network (VNet), Subnets, NSG, and Firewall**
-- Installed and configured **Nginx** to serve a static HTML page
-- Secured access using **Azure Firewall and NSG rules**
-- Used **Azure Bastion** for remote access without exposing SSH
+## 📦 Project Structure
+- `setup-steps.md` – Full step-by-step deployment guide
+- `firewall-rules.md` – Documented firewall and NSG rules
+- `index.html` – Sample HTML page deployed to Nginx server
+- `.ssh-info.md` – Notes on SSH access using Bastion and PEM key
 
-## 🛠️ Setup Instructions
-1. **Create an Azure VM** (Ubuntu)
-2. **Configure Networking** (VNet, Subnets, NSG, Firewall)
-3. **Install Nginx & Deploy HTML Page**
-   
+## 🔐 Security
+- No public IP for the VM
+- Only HTTP and Bastion (443) allowed through NSG
+- Access via PEM file through Azure Bastion
+
+## 🚀 Technologies Used
+- Azure Portal
+- Nginx
+- Ubuntu 22.04
+- Bastion for remote SSH access
+
+## 🧠 Author
+[Your Name] – Azure & Cloud Computing Enthusiast
